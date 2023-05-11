@@ -66,6 +66,49 @@ mcrA_qPCR_graph <- ggplot(mcrA_sum_SD, aes(x=Depth, y=Mean, fill=Treatment)) +
   facet_wrap(~ Site, scales = "free_x")
 mcrA_qPCR_graph
 
-# Heatmap graphs showing the normalised data from the metagenomics and metatranscriptomics sequencing
+# Heatmaps showing the normalised data from the metagenomics (metaG) and metatranscriptomics (metaT) sequencing as well as the _Methanolobus_ MAGS
+
+heatmap_MetaT_genes_log_normalised <- ggplot(data= Baltic_MetaT_Genes, mapping = aes(x=Sample ,y= Genes, fill = Log_FPKM)) +
+  geom_tile(color="white", size=0.25) +
+  labs(x="", y="")+
+  scale_y_discrete(expand=c(0,0),limits = rev)+
+  theme_grey(base_size=8)+
+  theme(legend.text=element_text(size=14),
+        legend.title=element_text(size=14, face="bold"),
+        axis.ticks=element_line(linewidth =0.2),
+        panel.border=element_blank(),
+        axis.text.x = element_text(face="bold", size=14, angle = 90, hjust = 0, vjust = 0.5),
+        axis.text.y = element_text(face="bold", size=14))+
+  scale_fill_gradient(low = "darkorange", high = "blue3")
+heatmap_MetaT_genes_log_normalised
+
+heatmap_MetaG_genes_log_normalised <- ggplot(data= Baltic_MetaG_Genes, mapping = aes(x=Sample ,y= Genes, fill = Log_CPM)) +
+  geom_tile(color="white", size=0.25) +
+  labs(x="", y="")+
+  scale_y_discrete(expand=c(0,0),limits = rev)+
+  theme_grey(base_size=8)+
+  theme(legend.text=element_text(size=14),
+        legend.title=element_text(size=14, face="bold"),
+        axis.ticks=element_line(linewidth =0.2),
+        panel.border=element_blank(),
+        axis.text.x = element_text(face="bold", size=14, angle = 90, hjust = 0, vjust = 0.5),
+        axis.text.y = element_text(face="bold", size=14))+
+  scale_fill_gradient(low = "darkorange", high = "blue3")
+heatmap_MetaG_genes_log_normalised
+
+heatmap_Methanolobus_MAG <- ggplot(data= MAGs_Methanolobus, mapping = aes(x=Sample ,y= Genes, fill = Presence)) +
+  geom_tile(color="white", size=0.25) +
+  coord_equal(ratio=0.8)+
+  labs(x="", y="")+
+  scale_y_discrete(expand=c(0,0),limits = rev)+
+  theme_grey(base_size=8)+
+  theme(legend.text=element_text(size=10),
+        legend.title=element_text(size=10, face="bold"),
+        axis.ticks=element_line(size=0.2),
+        panel.border=element_blank(),
+        axis.text.x = element_text(face="bold", size=14, angle = 90, hjust = 0, vjust = 0.5),
+        axis.text.y = element_text(face="bold", size=14))+
+  scale_fill_gradient(low = "grey63", high = "blue3")
+
 
 
