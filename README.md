@@ -15,8 +15,8 @@ Any help with improving the scripts or any other comments are greatly appreciate
 5) Graphs_AverageGas_Depth_qPCR_heatmaps-ggplot2.R - Script containing information on the creation of all R graphs (avg gases, metag/T heatmap, qPCR)
 7) Spearman_correlation-PAST.txt - Step-by-step guide to using PAST for the Spearman's correlation analysis 
 8) Baltic_mcrA_PCoA_scores.csv - csv file imported into PAST  
-9) License text or md - I think cc-by-4.0 is best one
+9) LICENSE.md
 
 ## License
-This project is licensed under the terms of the xxxx license. See the License.md for further information.
+This project is licensed under the terms of the MIT License. See the LICENSE.md for further information.
 
