@@ -1,4 +1,4 @@
-# _Methanolobus_ and DMS
+# DMS degradation from _Methanolobus_
 Code for the paper:
 xxxx with enbedded link
 
