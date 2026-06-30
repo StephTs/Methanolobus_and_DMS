@@ -137,3 +137,5 @@ qiime feature-classifier fit-classifier-naive-bayes \
 
 #Everything is now ready to use in qiime2
 
+### Update June 30th, 2026 ###
+# Uploaded both the tax.txt and seqs.fasta
