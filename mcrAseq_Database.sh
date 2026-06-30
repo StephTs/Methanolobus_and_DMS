@@ -136,6 +136,3 @@ qiime feature-classifier fit-classifier-naive-bayes \
   --o-classifier NoBacUncArc5Env-tax-classifier.qza
 
 #Everything is now ready to use in qiime2
-
-### Update June 30th, 2026 ###
-# Uploaded both the tax.txt and seqs.fasta
